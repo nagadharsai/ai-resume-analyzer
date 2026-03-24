@@ -1,4 +1,5 @@
 # 🚀 AI Resume Analyzer
+> 🚀 Built a REST API that analyzes resumes against job descriptions and returns match scores, skill gaps, and improvement suggestions.
 
 AI Resume Analyzer is a full-stack application designed to evaluate resumes, identify skill gaps, and match candidate profiles against job descriptions.
 
@@ -12,6 +13,17 @@ This project simulates a real-world hiring assistant system. It analyzes resume 
 - Strengths in the resume
 - Missing skills
 - Actionable suggestions for improvement
+
+## 💡 Why I Built This
+
+I wanted to go beyond basic CRUD APIs and build something closer to a real-world system.
+
+Resume screening is a common problem in hiring, and I was curious how backend logic could be used to simulate decision-making — scoring candidates, identifying gaps, and suggesting improvements.
+
+This project helped me understand:
+- How to structure layered backend systems
+- How to design meaningful APIs
+- How to convert unstructured text into structured insights
 
 ---
 
@@ -98,4 +110,25 @@ POST /api/resume/analyze
   "strengths": ["Strong Java relevance detected"],
   "missingSkills": ["Microservices"],
   "suggestions": ["Add stronger evidence for missing skills"]
+}
+## 🧪 API Test Result
+
+### Sample Output
+
+```json
+{
+  "matchScore": 80,
+  "strengths": [
+    "Strong Java relevance detected",
+    "Spring Boot experience identified",
+    "AWS experience identified"
+  ],
+  "missingSkills": [
+    "Microservices"
+  ],
+  "suggestions": [
+    "Add stronger evidence for missing or underrepresented skills",
+    "Quantify project outcomes and business impact",
+    "Tailor summary and experience sections toward the job description"
+  ]
 }
