@@ -14,9 +14,11 @@ The goal of this project is to simulate a real-world hiring support tool that ca
 
 ## Why I’m building this
 
-I wanted to build a project that combines backend engineering, real-world business value, and AI-oriented thinking.
+This project is being built to reflect real-world backend engineering and system design practices.
 
-This project reflects the kind of systems I’m interested in building going forward — practical applications that use modern backend architecture and intelligent processing to solve real problems.
+The focus is not on creating a demo, but on designing a system that resembles a production-grade application — with clear API design, modular services, and scalability considerations.
+
+It represents the types of systems I work on and continue to build — practical, backend-driven applications that solve real problems with a structured, extensible approach.
 
 ## Planned tech stack
 
@@ -30,7 +32,7 @@ This project reflects the kind of systems I’m interested in building going for
 
 ## Initial architecture
 
-Frontend → Resume Upload/API Request → Spring Boot Backend → Resume Text Extraction → Analysis Engine → Response UI
+Frontend (React) → API Layer (Spring Boot) → Resume Processing Service → Analysis Engine → Response Layer
 
 ## Project status
 
