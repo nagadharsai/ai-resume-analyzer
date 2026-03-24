@@ -1,56 +1,101 @@
-# AI Resume Analyzer
+# 🚀 AI Resume Analyzer
 
-AI Resume Analyzer is a practical full stack project designed to evaluate resumes, identify skill gaps, and compare candidate profiles against job descriptions.
+AI Resume Analyzer is a full-stack application designed to evaluate resumes, identify skill gaps, and match candidate profiles against job descriptions.
 
-The goal of this project is to simulate a real-world hiring support tool that can help candidates improve their resumes and help recruiters or hiring teams quickly assess technical fit.
+---
 
-## What this project will do
+## 📌 Overview
 
-- Upload and process resume files
-- Extract and analyze resume content
-- Compare resume content with a job description
-- Identify missing skills and improvement areas
-- Generate structured feedback for the user
+This project simulates a real-world hiring assistant system. It analyzes resume content against job requirements and provides:
 
-## Why I’m building this
+- Match score
+- Strengths in the resume
+- Missing skills
+- Actionable suggestions for improvement
 
-This project is being built to reflect real-world backend engineering and system design practices.
+---
 
-The focus is not on creating a demo, but on designing a system that resembles a production-grade application — with clear API design, modular services, and scalability considerations.
+## 🧠 Features
 
-It represents the types of systems I work on and continue to build — practical, backend-driven applications that solve real problems with a structured, extensible approach.
+- 📊 Resume vs Job Description Matching
+- 🎯 Skill Gap Identification
+- 💡 Intelligent Suggestions
+- ⚡ REST API built with Spring Boot
+- 🌐 Frontend-ready architecture (React planned)
 
-## Planned tech stack
+---
 
+## 🏗️ Architecture
+
+Frontend (React)  
+↓  
+Spring Boot REST API  
+↓  
+Resume Analysis Service  
+↓  
+Rule-Based Analysis Engine  
+↓  
+Response (Score + Insights)
+
+---
+
+## 🛠️ Tech Stack
+
+**Backend**
 - Java
 - Spring Boot
-- REST APIs
+- Maven
+
+**Frontend (Planned)**
 - React
-- PostgreSQL
-- OpenAI API or NLP-based analysis layer
-- Docker
 
-## Initial architecture
+**Other**
+- REST APIs
+- JSON-based communication
 
-Frontend (React) → API Layer (Spring Boot) → Resume Processing Service → Analysis Engine → Response Layer
+---
 
-## Project status
+## 📂 Project Structure
 
-This project is currently being built in phases:
-1. Project setup
-2. Resume upload and text extraction
-3. Resume analysis service
-4. Job description matching
-5. Frontend integration
-6. Deployment and refinement
+backend/  
+src/main/java/com/nagadharsai/airesumeanalyzer/  
+controller/  
+service/  
+dto/  
+AiResumeAnalyzerApplication.java  
 
-## Future improvements
+src/main/resources/  
+application.properties  
 
-- Resume scoring system
-- ATS compatibility suggestions
-- Recruiter feedback mode
-- Dashboard for multiple resume comparisons
+frontend/  
+docs/
 
-## Author
+---
 
-Nagadhar Sai Kanderi
+## 🔗 API Endpoints
+
+### Health Check
+
+GET /api/resume/health
+
+### Analyze Resume
+
+POST /api/resume/analyze
+
+#### Sample Request
+
+```json
+{
+  "resumeText": "Experienced Java developer with Spring Boot and AWS...",
+  "jobDescription": "Looking for a Java developer with Spring Boot and Microservices experience..."
+}
+
+#### Sample Response
+
+```json
+{
+  "matchScore": 80,
+  "strengths": ["Strong Java relevance detected"],
+  "missingSkills": ["Microservices"],
+  "suggestions": ["Add stronger evidence for missing skills"]
+}
